@@ -1,70 +1,220 @@
-# Getting Started with Create React App
+🛍️ Mini E-Commerce Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fully functional mini e-commerce module built using React + TailwindCSS, featuring product listing, product details, cart, checkout, wishlist, filters, search, pagination, and dark mode.
 
-## Available Scripts
+📌 Live Demo
 
-In the project directory, you can run:
+(Add your Vercel link after deployment)
+➡️ Live Site: https://your-app-name.vercel.app
 
-### `npm start`
+🚀 Tech Stack
+Frontend
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+React – component-based UI
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+TailwindCSS – fast and responsive styling
 
-### `npm test`
+LocalStorage – persistent cart, wishlist & theme
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React Hooks – state and effect management
 
-### `npm run build`
+Why This Stack?
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React allows fast, dynamic UI updates and modular code.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+TailwindCSS provides clean, scalable styling with minimal CSS.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+LocalStorage ensures cart/wishlist persist across refresh.
 
-### `npm run eject`
+Entire app can be hosted easily on Vercel with zero backend requirements.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+📦 Features
+✔️ Core Requirements
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Product List Page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Grid view showing image, name, price, short description
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Add to Cart button
 
-## Learn More
+Click product → opens product details
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Product Details Page
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Large image, full description, price
 
-### Code Splitting
+Quantity selector
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Add to Cart button
 
-### Analyzing the Bundle Size
+Back navigation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Recommended products
 
-### Making a Progressive Web App
+Shopping Cart
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Add, remove, update quantity
 
-### Advanced Configuration
+View subtotal & grand total
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+LocalStorage persistence
 
-### Deployment
+Checkout Flow
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Name, email, address, payment method (COD)
 
-### `npm run build` fails to minify
+Input validation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Order Success confirmation screen
+
+Responsive UI
+
+Mobile-friendly navigation
+
+Cart count indicator
+
+Clean & modern layout
+
+⭐ Bonus Features (Extra Points)
+
+🔍 Search bar
+
+🎯 Category filters
+
+📑 Pagination
+
+❤️ Wishlist system
+
+🌙 Dark Mode with persistence
+
+🧩 Recommended products filter
+
+🗂️ Folder Structure
+src/
+│
+├── components/
+│   ├── CartItem.jsx
+│   ├── Navbar.jsx
+│   ├── ProductCard.jsx
+│   ├── Pagination.jsx
+│
+├── pages/
+│   ├── ProductsPage.jsx
+│   ├── ProductDetails.jsx
+│   ├── CartPage.jsx
+│   ├── CheckoutPage.jsx
+│   ├── OrderSuccessPage.jsx
+│   ├── WishlistPage.jsx
+│
+├── PRODUCTS.js         # Mock product data
+├── App.jsx
+└── index.js
+
+🛠️ Installation & Setup
+1. Clone the repository
+git clone https://github.com/YOUR-USERNAME/YOUR-REPO.git
+cd YOUR-REPO
+
+2. Install dependencies
+npm install
+
+3. Run development server
+npm start
+
+4. Build for production
+npm run build
+
+📖 Project Logic Explanation
+🔹 Product List Logic
+
+Data is imported from PRODUCTS.js
+
+Products can be filtered by category, searched by text, and paginated
+
+Clicking a product sets selectedProduct state and opens details page
+
+🔹 Product Details Logic
+
+Receives product object from parent state
+
+Allows selecting a quantity and adding to cart
+
+Shows recommended products from same category
+
+🔹 Cart Logic
+
+Cart is stored in React state + LocalStorage
+
+Supports:
+
+addItem(product, qty)
+
+removeItem(id)
+
+updateQuantity(id, qty)
+
+Recalculates totals dynamically
+
+🔹 Checkout Flow
+
+Requires name, email, address
+
+Validates inputs
+
+On submit → clears cart + shows success screen
+
+📱 Responsive Design
+
+Built using Tailwind’s mobile-first utilities:
+
+grid-cols-1 sm:grid-cols-2 md:grid-cols-3
+
+Responsive navbar
+
+Cards stack on smaller screens
+
+Fully optimized for mobile and desktop
+
+🚀 Deployment (Vercel)
+
+Push your code to GitHub
+
+Go to vercel.com → New Project
+
+Import your repo
+
+Framework: Create React App
+
+Build command:
+
+npm run build
+
+
+Output folder:
+
+build
+
+
+Click Deploy
+
+📸 Screenshots
+
+(Add screenshots here for your assignment)
+
+Product List
+
+Product Details
+
+Cart
+
+Checkout
+
+Order Success
+
+Wishlist
+
+Dark Mode
+
+📄 License
+
+This project is for educational and assessment purposes.
