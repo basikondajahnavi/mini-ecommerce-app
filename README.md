@@ -4,8 +4,7 @@ A fully functional mini e-commerce module built using React + TailwindCSS, featu
 
 📌 Live Demo
 
-(Add your Vercel link after deployment)
-➡️ Live Site: https://your-app-name.vercel.app
+➡️ Live Site: https://mini-ecommerce-app-rho.vercel.app/
 
 🚀 Tech Stack
 Frontend
@@ -194,24 +193,8 @@ Output folder:
 
 build
 
-
 Click Deploy
 
-📸 Screenshots
-
-(Add screenshots here for your assignment)
-
-Product List
-
-Product Details
-
-Cart
-
-Checkout
-
-Order Success
-
-Wishlist
 
 Dark Mode
 
