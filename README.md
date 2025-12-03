@@ -109,18 +109,14 @@ src/
 ├── App.jsx
 └── index.js
 
-🛠️ Installation & Setup
-1. Clone the repository
-git clone https://github.com/YOUR-USERNAME/YOUR-REPO.git
-cd YOUR-REPO
 
-2. Install dependencies
+1. Install dependencies
 npm install
 
-3. Run development server
+2. Run development server
 npm start
 
-4. Build for production
+3. Build for production
 npm run build
 
 📖 Project Logic Explanation
